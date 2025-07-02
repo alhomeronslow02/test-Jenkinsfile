@@ -1,17 +1,25 @@
-pipeline {
+pipeline{
   agent any
-  stages {
-    stage('Checkout code') {
-      git 'https://github.com/alhomeronslow02/test-Jenkinsfile'
+  stages{
+    stage('Checkout code'){
+      steps{
+        git 'https://github.com/alhomeronslow02/test-Jenkinsfile'
+      }
     }
-    stage('Build') {
-      sh 'echo "Build image - sh cmd"'
+    stage('Build'){
+      steps{
+        sh 'echo "Build image - sh cmd"'
+      }
     }
-    stage('Test') {
-      sh 'echo "Test app - sh cmd"'
+    stage('Test'){
+      steps{
+        sh 'echo "Test app - sh cmd"'
+      }
     } 
-    stage('Deploy') {
-      sh 'echo "Deploy app - sh cmd"'
+    stage('Deploy'){
+      steps{
+        sh 'echo "Deploy app - sh cmd"'
+      }
     } 
   }
 }
